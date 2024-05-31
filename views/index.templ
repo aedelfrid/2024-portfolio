@@ -1,27 +1,22 @@
 package views
 
 import (
-    "fmt"
-    "go_fullstack/views/components"
+	"fmt"
+	"aedelfrid/portfolio-server/views/components"
 )
 
-type Todo struct {
-    Id          string
-    Description string
-}
-
 templ Index() {
-    <!DOCTYPE html>
-    <html lang="en">
-        @components.Header()
-        
-        @components.Footer()
-    </html>
-    <script>
+	<!DOCTYPE html>
+	<html lang="en">
+		@components.Header()
+		@components.Hero()
+		@components.Footer()
+	</html>
+	<script>
         function reloadPage() {
-                setTimeout(function() {
-            window.location.reload();
-        }, 2000);
+            setTimeout(function() {
+                window.location.reload();
+            }, 2000);
         }
     </script>
 }
